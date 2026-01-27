@@ -1,6 +1,6 @@
 namespace grad_joi_delivery_dotnet.Problems
 {
-    public class SampleProblem
+    public static class SampleProblem
     {
         public static void Run()
         {
@@ -16,15 +16,11 @@ namespace grad_joi_delivery_dotnet.Problems
             }
 
             double baseCost = 50.0;
-            if (distanceKm <= 5)
-            {
-                return baseCost;
-            }
-            else
-            {
-                double extraDistance = distanceKm - 5;
-                return baseCost + (extraDistance * 10);
-            }
+            double extraDistance = distanceKm - 5;
+            return distanceKm <= 5
+                ? baseCost
+                : baseCost + (extraDistance * 10);
+
         }
     }
 }
