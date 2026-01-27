@@ -1,34 +1,37 @@
-const DistanceMap = require("../model/DistanceMap");
-const Item = require("../model/Item");
-const Store = require("../model/Store");
+using grad_joi_delivery_dotnet.Models;
 
-class StaticData {
-  static ZONEA = "ZoneA";
-  static ZONEB = "ZoneB";
-  static ZONEC = "ZoneC";
+namespace grad_joi_delivery_dotnet.StaticData
+{
+    public class StaticData
+    {
+        public const string ZONEA = "ZoneA";
+        public const string ZONEB = "ZoneB";
+        public const string ZONEC = "ZoneC";
 
-  static distanceMap = [
-    new DistanceMap(SeedData.ZONEA, SeedData.ZONEA, 0),
-    new DistanceMap(SeedData.ZONEA, SeedData.ZONEB, 3),
-    new DistanceMap(SeedData.ZONEA, SeedData.ZONEC, 6),
-    new DistanceMap(SeedData.ZONEB, SeedData.ZONEC, 3),
-    new DistanceMap(SeedData.ZONEB, SeedData.ZONEB, 0),
-    new DistanceMap(SeedData.ZONEB, SeedData.ZONEC, 8),
-    new DistanceMap(SeedData.ZONEC, SeedData.ZONEC, 0),
-  ];
+        public static List<DistanceMap> DistanceMap = new List<DistanceMap>
+        {
+            new DistanceMap(ZONEA, ZONEA, 0),
+            new DistanceMap(ZONEA, ZONEB, 3),
+            new DistanceMap(ZONEA, ZONEC, 6),
+            new DistanceMap(ZONEB, ZONEC, 3),
+            new DistanceMap(ZONEB, ZONEB, 0),
+            new DistanceMap(ZONEB, ZONEC, 8),
+            new DistanceMap(ZONEC, ZONEC, 0),
+        };
 
-  static stores = [
-    new Store("1", SeedData.ZONEA, ["Milk", "Eggs", "Bread"]),
-    new Store("2", SeedData.ZONEB, ["Bread", "Milks"]),
-    new Store("3", SeedData.ZONEC, ["Juice", "Bread"]),
-  ];
+        public static List<Store> Stores = new List<Store>
+        {
+            new Store("1", ZONEA, new List<string> { "Milk", "Eggs", "Bread" }),
+            new Store("2", ZONEB, new List<string> { "Bread", "Milks" }),
+            new Store("3", ZONEC, new List<string> { "Juice", "Bread" }),
+        };
 
-  static items = [
-    new Item("1", "Notebook", "", 15),
-    new Item("2", "Keyboard", "", 50),
-    new Item("3", "Mouse", "", 25),
-    new Item("4", "Monitor", "", 75),
-  ];
+        public static List<Item> Items = new List<Item>
+        {
+            new Item("1", "Notebook", "", 15),
+            new Item("2", "Keyboard", "", 50),
+            new Item("3", "Mouse", "", 25),
+            new Item("4", "Monitor", "", 75),
+        };
+    }
 }
-
-module.exports = StaticData;

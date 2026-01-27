@@ -4,7 +4,7 @@ namespace grad_joi_delivery_dotnet.Problems
     {
         public static void Run()
         {
-            double cost = CalculateCost(8.0); // Example distance
+            double cost = CalculateCost(8.0);
             Console.WriteLine($"Delivery cost for 8 km: ₹{cost}");
         }
 

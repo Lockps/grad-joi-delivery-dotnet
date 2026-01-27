@@ -1,4 +1,6 @@
-﻿using grad_joi_delivery_dotnet.Problems;
+using grad_joi_delivery_dotnet.Problems;
+
+namespace grad_joi_delivery_dotnet;
 
 class Program
 {
