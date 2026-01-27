@@ -9,10 +9,6 @@ build:
 run: build
 	dotnet run --project $(PROJECT_FILE)
 
-# Usage:
-#   make test                    - Run all tests
-#   make test TEST=SampleProblemTests  - Run tests in SampleProblemTests class
-#   make test TEST="CalculateCost"     - Run tests containing "CalculateCost" in name
 test: build
 ifdef TEST
 	dotnet test $(TEST_PROJECT) --filter "FullyQualifiedName~$(TEST)"

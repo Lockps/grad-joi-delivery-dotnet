@@ -1,6 +1,6 @@
 namespace grad_joi_delivery_dotnet.Problems
 {
-    public class SampleProblem
+    public static class SampleProblem
     {
         public static void Run()
         {

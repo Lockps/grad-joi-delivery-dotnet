@@ -1,4 +1,7 @@
-public enum OrderStatus
+namespace grad_joi_delivery_dotnet.Models
 {
-    CREATED,COMPLETED,CANCELLED,REJECTED
+    public enum OrderStatus
+    {
+        CREATED, COMPLETED, CANCELLED, REJECTED
+    }
 }
