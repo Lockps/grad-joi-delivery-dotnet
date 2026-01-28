@@ -6,6 +6,7 @@ static class Program
 {
     static void Main(string[] args)
     {
-        SampleProblem.Run();
+        Console.WriteLine("Insert your search text: ");
+        string searchInput = Console.ReadLine();
     }
 }

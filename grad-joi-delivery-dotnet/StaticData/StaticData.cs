@@ -8,7 +8,7 @@ namespace grad_joi_delivery_dotnet.StaticData
         public const string ZONEB = "ZoneB";
         public const string ZONEC = "ZoneC";
 
-        public static List<DistanceMap> DistanceMap = new List<DistanceMap>
+        public static readonly IReadOnlyList<DistanceMap> DistanceMap = new List<DistanceMap>
         {
             new DistanceMap(ZONEA, ZONEA, 0),
             new DistanceMap(ZONEA, ZONEB, 3),
@@ -17,7 +17,7 @@ namespace grad_joi_delivery_dotnet.StaticData
             new DistanceMap(ZONEB, ZONEB, 0),
             new DistanceMap(ZONEB, ZONEC, 8),
             new DistanceMap(ZONEC, ZONEC, 0),
-        };
+        }.AsReadOnly();
 
         public static List<Store> Stores = new List<Store>
         {
@@ -32,6 +32,7 @@ namespace grad_joi_delivery_dotnet.StaticData
             new Item("2", "Keyboard", "", 50),
             new Item("3", "Mouse", "", 25),
             new Item("4", "Monitor", "", 75),
+            new Item("5", "Amul Full Cream Milk", "Milk Product - Milk", 60, Category.DAIRY),
         };
     }
 }
